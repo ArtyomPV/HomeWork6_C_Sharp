@@ -7,6 +7,18 @@
 1, -7, 567, 89, 223-> 3+
 */
 
+Console.Write("Enter any number, how many times you will enter some value: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if(number <= 0) Console.Write("Enter a number more then zero.");
+else {
+    int countPositivNumber = 0;
+    for(int i = 0; i < number; i++){
+        Console.Write($"Enter the number {i + 1}: ");
+        if(Convert.ToInt32(Console.ReadLine()) > 0) countPositivNumber++;
+    }
+
+    Console.Write($"\nYou entered {countPositivNumber} positive number.");
+}
 // int[] Array()
 // {
 //     Console.Write("Enter any number, how many times you will enter some value ");
@@ -50,19 +62,19 @@
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 */
 
-void FindIntersectionPoint(){
-    string[] nameCoefficient = new string[] {"b1", "k1", "b2", "k2"};
-    double[] valueCoefficient = new double[4];
+// void FindIntersectionPoint(){
+//     string[] nameCoefficient = new string[] {"b1", "k1", "b2", "k2"};
+//     double[] valueCoefficient = new double[4];
 
-    for(int i = 0; i < nameCoefficient.Length; i++){
-        Console.Write($"Enter value of {nameCoefficient[i]}: ");
-        valueCoefficient[i] = Convert.ToInt32(Console.ReadLine());
-    }
+//     for(int i = 0; i < nameCoefficient.Length; i++){
+//         Console.Write($"Enter value of {nameCoefficient[i]}: ");
+//         valueCoefficient[i] = Convert.ToInt32(Console.ReadLine());
+//     }
 
-    double x = (valueCoefficient[2]-valueCoefficient[0])/(valueCoefficient[1]-valueCoefficient[3]);
-    double y = valueCoefficient[1]*x + valueCoefficient[0];
-    Console.Write($"({x}; {y})");
-}
+//     double x = (valueCoefficient[2]-valueCoefficient[0])/(valueCoefficient[1]-valueCoefficient[3]);
+//     double y = valueCoefficient[1]*x + valueCoefficient[0];
+//     Console.Write($"({x}; {y})");
+// }
 
-FindIntersectionPoint();
+// FindIntersectionPoint();
 
