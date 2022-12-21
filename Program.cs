@@ -6,19 +6,22 @@
 0, 7, 8, -2, -2 -> 2
 1, -7, 567, 89, 223-> 3+
 */
+void CountPositiveNumber(){ 
+    Console.Write("Enter any number, how many times you will enter some value: ");
+    int number = Convert.ToInt32(Console.ReadLine());
+    if(number <= 0) Console.Write("Error. Enter a number more then zero.");
+    else {
+        int countPositivNumber = 0;
+        for(int i = 0; i < number; i++){
+            Console.Write($"Enter the number {i + 1}: ");
+            if(Convert.ToInt32(Console.ReadLine()) > 0) countPositivNumber++;
+        }
 
-Console.Write("Enter any number, how many times you will enter some value: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if(number <= 0) Console.Write("Enter a number more then zero.");
-else {
-    int countPositivNumber = 0;
-    for(int i = 0; i < number; i++){
-        Console.Write($"Enter the number {i + 1}: ");
-        if(Convert.ToInt32(Console.ReadLine()) > 0) countPositivNumber++;
+        Console.Write($"\nYou entered {countPositivNumber} positive number.");
     }
-
-    Console.Write($"\nYou entered {countPositivNumber} positive number.");
 }
+CountPositiveNumber();
+
 // int[] Array()
 // {
 //     Console.Write("Enter any number, how many times you will enter some value ");
